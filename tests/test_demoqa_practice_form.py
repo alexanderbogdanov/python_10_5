@@ -4,7 +4,10 @@ from selene import browser, be, have, by, command
 
 
 def test_practice_form():
+
     browser.open('/automation-practice-form')
+    browser.execute_script('document.querySelector("#fixedban").remove()')
+    browser.execute_script('document.querySelector("footer").remove()')
     browser.element('#firstName').should(be.blank).type('Benedict')
     browser.element('#lastName').should(be.blank).type('Cumberbatch')
     browser.element('#userEmail').should(be.blank).type('benya@mail.ru')
@@ -30,4 +33,5 @@ def test_practice_form():
     browser.open('/automation-practice-form')
 #fixedban
 
+# def remove(element)
 
