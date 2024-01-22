@@ -4,8 +4,10 @@ from selene import browser, be, have, by, command
 
 
 def test_practice_form():
-
     browser.open('/automation-practice-form')
+    # remove()
+    remove("#fixedban")
+    remove("footer")
     browser.execute_script('document.querySelector("#fixedban").remove()')
     browser.execute_script('document.querySelector("footer").remove()')
     browser.element('#firstName').should(be.blank).type('Benedict')
@@ -31,7 +33,8 @@ def test_practice_form():
     # browser.execute_script()
     # react-datepicker__month-container
     browser.open('/automation-practice-form')
-#fixedban
 
-# def remove(element)
 
+def remove(element):
+    js_code = f"document.querySelector(\"{element}\").remove();"
+    browser.driver.execute_script(js_code)
