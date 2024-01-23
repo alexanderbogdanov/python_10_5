@@ -1,0 +1,30 @@
+{
+  "user_data": {
+    "first_name": "Benedict",
+    "last_name": "Cumberbatch",
+    "email": "benya@mail.ru",
+    "gender": "Male",
+    "phone": "0123456789",
+    "date_of_birth": "24 September,1977",
+    "year": "1977",
+    "month": "September",
+    "subjects": "Maths",
+    "hobbies": ["Reading"],
+    "address": "221b, Baker Str.",
+    "state": "NCR",
+    "city": "Delhi",
+    "picture_path": "resources/bkb.jpeg"
+  },
+  "user_data_check": {
+    "name": "Benedict Cumberbatch",
+    "email": "benya@mail.ru",
+    "gender": "Male",
+    "phone": "0123456789",
+    "date_of_birth": "24 September,1977",
+    "subjects": "Maths",
+    "hobbies": "Reading",
+    "picture": "bkb.jpeg",
+    "address": "221b, Baker Str.",
+    "city_and_state": "NCR Delhi"
+  }
+}
