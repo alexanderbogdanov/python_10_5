@@ -1,7 +1,6 @@
-from os import path
-
 from selene import browser, be, by
 
+from data.TestData import FilePaths
 from helpers.common_helpers import scroll_to
 
 
@@ -23,8 +22,7 @@ def fill_form(user_data):
     browser.element("#subjectsInput").should(be.blank).click().type(user_data['subjects']).press_enter()
     browser.element("[for='hobbies-checkbox-2']").click()
     scroll_to("#submit")
-    browser.element("#uploadPicture").send_keys(
-        path.abspath(user_data['picture_path']))
+    browser.element("#uploadPicture").send_keys(FilePaths.PHOTO_PATH)
     browser.element("#currentAddress").should(be.blank).type(user_data['address'])
     browser.element("#state").click()
     browser.element(by.text(user_data['state'])).click()
